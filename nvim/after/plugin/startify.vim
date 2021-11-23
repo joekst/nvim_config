@@ -8,19 +8,18 @@ function! s:gitUntracked()
   return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 
-"function! GetUniqueSessionName()
-"  let path = fnamemodify(getcwd(), ':~:t')
-"  let path = empty(path) ? 'no-project' : path
-"  let branch = gitbranch#name()
-"  let branch = empty(branch) ? '' : '-' . branch
-"  return substitute(path . branch, '/', '-', 'g')
-"endfunction
+function! GetUniqueSessionName()
+  let path = fnamemodify(getcwd(), ':~:t')
+  let path = empty(path) ? 'no-project' : path
+  let branch = system('git rev-parse --abbrev-ref HEAD')
+  let branch = empty(branch) ? '' : '-' . branch
+  return substitute(path . branch, '/', '-', 'g')
+endfunction
 
 
 
-let g:startify_custom_header = 
-  \ startify#pad(split(system('figlet -w 100 NVIM!!'), '\n'))
-"(system('figlet -w 100 VIM2020'))
+"let g:startify_custom_header = 
+"  \ startify#pad(split(system('figlet -w 100 NVIM!!'), '\n'))
 
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   MRU']            },
@@ -32,6 +31,6 @@ let g:startify_lists = [
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
 
-"autocmd User    StartifyReady silent execute 'SLoad ' . GetUniqueSessionName()
-"autocmd VimLeavePre *         silent execute 'SSave ' . GetUniqueSessionName()
+autocmd User    StartifyReady silent execute 'SLoad ' . GetUniqueSessionName()
+autocmd VimLeavePre *         silent execute 'SSave ' . GetUniqueSessionName()
 

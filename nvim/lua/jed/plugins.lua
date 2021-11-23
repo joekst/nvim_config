@@ -58,6 +58,14 @@ return require("packer").startup {
     use "tpope/vim-fugitive"
     use "mhinz/vim-startify"
 
+    use "nvim-lua/popup.nvim"
+    use "nvim-lua/plenary.nvim"
+    use { 
+          'nvim-telescope/telescope.nvim',
+	        commit = '587a10d1494d8ffa1229246228f0655db2f0a48a', --last working commit for 0.5.0
+          requires = { 'nvim-lua/plenary.nvim' }
+    }
+
   end,
 
   config = {
