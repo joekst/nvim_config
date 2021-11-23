@@ -31,6 +31,7 @@ let g:startify_lists = [
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
 
-autocmd User    StartifyReady silent execute 'SLoad ' . GetUniqueSessionName()
-autocmd VimLeavePre *         silent execute 'SSave ' . GetUniqueSessionName()
+" Create/load sessions automatically on open and save on close
+"autocmd User    StartifyReady silent execute 'SLoad ' . GetUniqueSessionName()
+"autocmd VimLeavePre *         silent execute 'SSave ' . GetUniqueSessionName()
 

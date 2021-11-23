@@ -16,4 +16,6 @@ require "jed.plugins"
 require "jed.settings"
 require "jed.mappings"
 
-
+-- Load telescope setup and mappings
+require "jed.telescope_setup"
+require "jed.telescope_mappings"
