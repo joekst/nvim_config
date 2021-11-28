@@ -74,7 +74,7 @@ end
 
 function M.curbuf()
   local opts = themes.get_dropdown {
-    winblend = 0,
+    winblend = 19,
     border = true,
     previewer = false,
     shorten_path = false,

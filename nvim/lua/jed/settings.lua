@@ -7,7 +7,8 @@ opt.expandtab = true            -- Convert tabs to spaces.
 opt.smarttab = true             -- Makes tabbing smarter.
 opt.smartindent = true          -- Makes indenting somewhat smarter.
 opt.autoindent = true           -- Good autoindent.
-
+opt.scrolloff = 8               -- Keep a buffer to the top of the terminal.
+opt.sidescrolloff = 8           -- Keep a buffer to the side of the terminal.
 opt.hidden = true               -- Required to keep multiple buffers open.
 opt.cmdheight = 2               -- More space for displaying messages.
 
@@ -39,7 +40,7 @@ opt.pumblend = 17
 
 opt.laststatus = 2               -- Always display statusline.
 opt.cursorline = true            -- Enable highlightning of the current line.
-opt.signcolumn = 'yes'           -- Always show the signcolumn.
+opt.signcolumn = 'yes:2'           -- Always show the signcolumn.
 
 opt.incsearch = true             -- Make search act like in modern browsers.
 opt.showmatch = true             -- Show matching brackets when text indicator is over them.
@@ -62,4 +63,6 @@ opt.showcmd = true
 
 opt.breakindent = true
 opt.showbreak = string.rep(" ", 3)
+
+opt.termguicolors = true
 

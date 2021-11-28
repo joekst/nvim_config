@@ -67,7 +67,10 @@ return require("packer").startup {
     }
     
     use "nvim-telescope/telescope-fzy-native.nvim"
-
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+    }
   end,
 
   config = {
