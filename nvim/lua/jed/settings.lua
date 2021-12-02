@@ -31,12 +31,11 @@ opt.mouse = 'a'                 -- Enable mouse.
 
 opt.background = 'dark'         -- Tell vim what the background colors look like.
 
-opt.wildmode = "longest:list:full"
-opt.wildmenu = true
 opt.wildignore = "__pycache__"
 opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*", "**/.git/*" }
-opt.wildoptions = "pum"
 opt.pumblend = 17
+opt.wildmode = "longest:full"
+opt.wildoptions = "pum"
 
 opt.laststatus = 2               -- Always display statusline.
 opt.cursorline = true            -- Enable highlightning of the current line.
