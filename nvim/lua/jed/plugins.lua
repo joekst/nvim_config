@@ -52,14 +52,14 @@ return require("packer").startup {
     -- My Plugins
     use "kyazdani42/nvim-web-devicons"
     use "morhetz/gruvbox"
---    use "vim-airline/vim-airline"
---    use "vim-airline/vim-airline-themes"
     use "EdenEast/nightfox.nvim"
     use { 'nvim-lualine/lualine.nvim',
           requres = {'kyazdani42/nvim-web-devicons', opt = true}
         }
+
     use "airblade/vim-gitgutter"
     use "tpope/vim-fugitive"
+
     use "mhinz/vim-startify"
 
     use "nvim-lua/popup.nvim"
@@ -74,6 +74,12 @@ return require("packer").startup {
     use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
+    }
+    use {
+      'numToStr/Comment.nvim',
+      config = function()
+        require('Comment').setup()
+      end
     }
   end,
 
