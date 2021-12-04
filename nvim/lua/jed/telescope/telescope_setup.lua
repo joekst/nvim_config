@@ -21,7 +21,15 @@ require("telescope").setup({
      mappings = {
        i = {
            ["<C-x>"] = false,
-           ["<C-q>"] = actions.send_to_qflist,
+           ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+           -- ["<C-h>"] = R("telescope").extentions.hop.hop, -- toggle selection
+           --[[ ["<C-space>"] = function(prompt_bufnr)
+            local opts = {
+              callback = actions.toggle_selection,
+              loop_callback = actions.send_selected_to_qflist,
+            }
+            require("telescope").extensions.hop._hop_loop(prompt_bufnr, opts)
+          end, ]]
         },
      },
     },
@@ -34,6 +42,7 @@ require("telescope").setup({
 })
 
 require("telescope").load_extension("fzy_native")
+require("telescope").load_extension("hop")
 
 local set_prompt_to_entry_value = function(prompt_bufnr)
   local entry = action_state.get_selected_entry()
