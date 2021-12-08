@@ -138,6 +138,13 @@ function M.search_all_files()
   }
 end
 
+function M.search_open_buffers()
+  require("telescope.builtin").live_grep {
+    prompt_title = 'find string in open buffers',
+    grep_open_files = true
+  }
+end
+
 function M.git_files()
   local path = vim.fn.expand "%:h"
   P(path)
@@ -163,6 +170,12 @@ function M.git_files()
   }
 
   require("telescope.builtin").git_files(opts)
+end
+
+function M.list_old_files()
+  require("telescope.builtin").oldfiles({
+    only_cwd = true
+  })
 end
 
 return setmetatable({}, {
