@@ -34,4 +34,3 @@ map {'n', '<C-down>', ':cnext<CR>'}
 map {'n', '<C-q><C-q>', ':cclose<CR>'}
 map {'n', '<C-q>', ':copen<CR>'}
 
-

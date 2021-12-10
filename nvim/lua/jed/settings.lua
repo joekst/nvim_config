@@ -65,10 +65,8 @@ opt.showbreak = string.rep(" ", 3)
 
 opt.termguicolors = true
 
--- vim.o.guifont = "JetBrainsMono\\ Nerd\\ Font\\ Mono:h18"
 opt.guifont = "Hack\\ Nerd\\ Font\\ Mono:h18"
--- vim.o.guifont = "SauceCodePro Nerd Font:h17"
--- opt.guifont = "FiraCode Nerd Font:h17"
 
+opt.keywordprg = ':help'    -- Set program to be invoked on K, see :help K
 
 -- opt.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
