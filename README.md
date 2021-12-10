@@ -1,5 +1,6 @@
 # nvim_config
-My take on configuring neovim using lua. Requires version 0.5.0
+My take on configuring neovim using lua. Requires version 0.5.0+
+Mostly check version of telescope, newer versions need 0.6.0 to work.
 
 
 ## Currently used plugins  
@@ -13,12 +14,17 @@ My take on configuring neovim using lua. Requires version 0.5.0
 * plenary.nvim
 * telescope
 * comment.nvim
+* luasnip
+* nvim-lspconfig
+* nvim-cmp
+* cmp-cmdline
+* cmp-path
+* cmp_luasnip
 
 
 ## Todo
-* Configure tree-sitter  
-* Add and configure nvim-cmp  
-* Add sharkdp/fd  
+* Add and configure nvim-cmp for lsp 
+* Add/investigate sharkdp/fd  
 
 
 ## Influenced by
