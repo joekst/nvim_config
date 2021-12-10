@@ -1,5 +1,5 @@
 # nvim_config
-My take on configuring neovim using lua. Requires version 0.5.0+
+My take on configuring neovim using lua. Requires version 0.5.0+.  
 Mostly check version of telescope, newer versions need 0.6.0 to work.
 
 
