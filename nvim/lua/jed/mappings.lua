@@ -18,19 +18,37 @@ end
 
 map {'i', 'jk', '<Esc>'}
 map {'n', '<leader>nn', ':nohlsearch<CR>'}
+
+-- Change buffers with TAB
 map {'n', '<TAB>', ':bnext<CR>'}
 map {'n', '<S-TAB>', ':bprevious<CR>'}
 
 map {'n', '<M-Down>', '<Esc>:m .+1<CR>=='}
-map {'n', '<M-Up>', '<Esc>:m .-2<CR>=='}
 map {'i', '<M-j>', '<Esc>:m .+1<CR>==gi'}
+map {'n', '<M-Up>', '<Esc>:m .-2<CR>=='}
 map {'i', '<M-k>', '<Esc>:m .-2<CR>==gi'}
 map {'v', '<M-j>', '<Esc>:m .>+1<CR>gv=gv'}
 map {'v', '<M-k>', '<Esc>:m .<-2<CR>gv=gv'}
 
+-- Navigate in quickfix window.
 map {'n', '<C-up>', ':cprev<CR>'}
 map {'n', '<C-down>', ':cnext<CR>'}
 
+-- Open and close the quickfix window.
 map {'n', '<C-q><C-q>', ':cclose<CR>'}
 map {'n', '<C-q>', ':copen<CR>'}
+
+-- Start a new buffer fast.
+map {'n', '<leader>n', ':enew<CR>'}
+
+map {'v', 'y', 'ygv<ESC>' }
+
+-- Keep search results centered
+map {'n', 'n', 'nzzzv' }
+map {'n', 'N', 'Nzzzv' }
+
+map {'n', '<leader>u', ':PackerSync<CR>' }
+
+-- Telescope stuff used with session_manager
+map {'n', '<space>ss', ':Telescope sessions [save_current=true]<CR>'}
 

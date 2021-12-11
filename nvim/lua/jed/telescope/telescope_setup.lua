@@ -53,6 +53,7 @@ require("telescope").setup({
 
 require("telescope").load_extension("fzy_native")
 require("telescope").load_extension("hop")
+require("telescope").load_extension("sessions")
 
 local set_prompt_to_entry_value = function(prompt_bufnr)
   local entry = action_state.get_selected_entry()

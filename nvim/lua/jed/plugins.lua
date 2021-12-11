@@ -49,19 +49,26 @@ return require("packer").startup {
     use "lewis6991/impatient.nvim"
 
 
-    -- My Plugins
+    -- My Plugins --
+
+
     use "kyazdani42/nvim-web-devicons"
 
--- use "morhetz/gruvbox"    
     use "EdenEast/nightfox.nvim"
     use { 'nvim-lualine/lualine.nvim',
           requres = {'kyazdani42/nvim-web-devicons', opt = true}
-        }
+    }
+
+    use {'Shatur/neovim-session-manager'}
 
     use "airblade/vim-gitgutter"
     use "tpope/vim-fugitive"
 
-    use "mhinz/vim-startify"
+    -- use "mhinz/vim-startify"
+    use { 
+          'goolord/alpha-nvim',
+          requires = {'kyazdani42/nvim-web-devicons'}
+    }
 
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
@@ -91,17 +98,18 @@ return require("packer").startup {
     use {'hrsh7th/cmp-buffer'}
     use {'hrsh7th/nvim-cmp'}
 
+    -- use {'simrat39/symbols-outline.nvim'} -- Give a tree view of symbols, using language server.
+
     -- Snippet tool
     use {'L3MON4D3/LuaSnip'}
     use {'saadparwaiz1/cmp_luasnip'}
-
 
 
   end,
 
   config = {
     display = {
-      -- open_fn = require('packer.util').float,
+      open_fn = require('packer.util').float,
     },
   },
 }

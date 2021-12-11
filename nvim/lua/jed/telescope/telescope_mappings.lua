@@ -34,5 +34,7 @@ map_tele("<space>ft", "git_files")
 map_tele("<space>fo", "search_open_buffers")
 map_tele("<space>of", "list_old_files")
 
+-- map_tele("<space>ss", ":Telescope sessions [save_current=true]<CR>")
+
 return map_tele
 
