@@ -16,8 +16,12 @@ ls.snippets = {
     s("cout", {
       t("std::cout << \""),
       i(1),
-      t("\" << std::endl"),
+      t("\" << std::endl;"),
+    }),
+    s("ppde", {
+      t({"PPBRIDGE_DEBUG(com_ericsson_ppbridge_gtpu,", "\t\"TELESTO: "}),
+      i(1),
+      t("\");"),
     })
   },
 }
-

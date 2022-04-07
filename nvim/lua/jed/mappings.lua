@@ -56,7 +56,8 @@ map {'n', '<space>ss', ':Telescope sessions [save_current=true]<CR>'}
 -- Move this to after/harpoon.lua perhaps
 map {'n', '<space>hh', ':lua require("harpoon.ui").toggle_quick_menu()<CR>' }
 map {'n', '<space>a', ':lua require("harpoon.mark").add_file()<CR>' }
-map {'n', '<space>1', ':lua require("harpoon.ui").nav_file(1)<CR>' }
-map {'n', '<space>2', ':lua require("harpoon.ui").nav_file(2)<CR>' }
-map {'n', '<space>3', ':lua require("harpoon.ui").nav_file(3)<CR>' }
-map {'n', '<space>4', ':lua require("harpoon.ui").nav_file(4)<CR>' }
+map {'n', '<space>n', ':lua require("harpoon.ui").nav_file(1)<CR>' }
+map {'n', '<space>e', ':lua require("harpoon.ui").nav_file(2)<CR>' }
+map {'n', '<space>i', ':lua require("harpoon.ui").nav_file(3)<CR>' }
+map {'n', '<space>o', ':lua require("harpoon.ui").nav_file(4)<CR>' }
+

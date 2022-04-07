@@ -67,6 +67,7 @@ opt.termguicolors = true
 
 opt.guifont = "Hack\\ Nerd\\ Font\\ Mono:h18"
 
-opt.keywordprg = ':help'    -- Set program to be invoked on K, see :help K
+opt.keywordprg = ":help"    -- Use K to access help for word under cursor
 
+opt.cursorcolumn = true
 -- opt.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"

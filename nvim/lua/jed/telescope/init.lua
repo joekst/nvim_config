@@ -82,7 +82,7 @@ function M.curbuf()
   require("telescope.builtin").current_buffer_fuzzy_find(opts)
 end
 
-function M.file_browser()
+--[[ function M.file_browser()
   local opts
 
   opts = {
@@ -130,11 +130,11 @@ function M.file_browser()
   }
 
   require("telescope.builtin").file_browser(opts)
-end
+end ]]
 
 function M.search_all_files()
   require("telescope.builtin").find_files {
-    find_command = { "rg", "--no-ignore", "--files" },
+    find_command = { "rg", "--no-ignore", "--files", "--hidden=true" },
   }
 end
 

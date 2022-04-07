@@ -74,16 +74,17 @@ return require("packer").startup {
     use "nvim-lua/plenary.nvim"
     use { 
           'nvim-telescope/telescope.nvim',
---	        commit = '587a10d1494d8ffa1229246228f0655db2f0a48a', --last working commit for 0.5.0
+	        -- commit = '587a10d1494d8ffa1229246228f0655db2f0a48a', --last working commit for 0.5.0
           requires = { 'nvim-lua/plenary.nvim' }
     }
 
-    use  {'nvim-telescope/telescope-hop.nvim'}
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+    use {'nvim-telescope/telescope-hop.nvim'}
     use "nvim-telescope/telescope-fzy-native.nvim"
-    use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
-    }
+    -- use {
+    --   'nvim-treesitter/nvim-treesitter',
+    --   run = ':TSUpdate'
+    -- }
     use {
       'numToStr/Comment.nvim',
       config = function()
@@ -107,7 +108,16 @@ return require("packer").startup {
     use {
       'ThePrimeagen/harpoon',
       requires = {'nvim-lua/plenary.nvim'}    
-  }
+    }
+
+    use {'MTDL9/vim-log-highlighting'}
+
+    use {
+      'AckslD/nvim-neoclip.lua',
+      config = function()
+        require('neoclip').setup()
+      end,
+    }
 
   end,
 

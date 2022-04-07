@@ -1,4 +1,4 @@
-pcall(require, "impatient")
+--jkcall(require, "impatient")
 
 -- require "jed.profile"
 

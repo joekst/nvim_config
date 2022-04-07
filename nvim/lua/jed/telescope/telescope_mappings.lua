@@ -27,12 +27,19 @@ map_tele("<leader>en", "edit_neovim")
 map_tele("<space>fb", "buffers")
 map_tele("<space>ff", "curbuf")
 
-map_tele("<space>fe", "file_browser")
+-- map_tele("<space>fe", ":Telescope file_browser")
 map_tele("<space>fi", "search_all_files")
 map_tele("<space>ft", "git_files")
 
 map_tele("<space>fo", "search_open_buffers")
 map_tele("<space>of", "list_old_files")
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<space>fe",
+  ":Telescope file_browser<CR>",
+  { noremap = true }
+)
 
 return map_tele
 

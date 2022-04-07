@@ -46,14 +46,18 @@ require("telescope").setup({
     extensions = {
         fzy_native = {
             override_generic_sorter = false,
-            override_file_sorter = true,
+            override_file_sorter = false,
+        },
+        file_browser = {
         },
     },
 })
 
 require("telescope").load_extension("fzy_native")
 require("telescope").load_extension("hop")
-require("telescope").load_extension("sessions")
+-- require("telescope").load_extension("sessions")
+require("telescope").load_extension("neoclip")
+require("telescope").load_extension("file_browser")
 
 local set_prompt_to_entry_value = function(prompt_bufnr)
   local entry = action_state.get_selected_entry()
