@@ -1,3 +1,9 @@
+local statusOk, lualine = pcall(require, "lualiine")
+if not statusOk then
+  return
+end
+
+
 local colors = {
   red = '#ca1243',
   grey = '#a0a1a7',
