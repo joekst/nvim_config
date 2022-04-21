@@ -7,4 +7,6 @@ require "jed.telescope"
 require "jed.nvim-tree"
 require "jed.whichkey"
 require "jed.gitsigns"
+require "jed.alpha"
+require "jed.comments"
 

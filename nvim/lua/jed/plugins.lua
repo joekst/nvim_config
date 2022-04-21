@@ -1,19 +1,6 @@
 _ = vim.cmd [[packadd packer.nvim]]
 _ = vim.cmd [[packadd vimball]]
 
-local has = function(x)
-  return vim.fn.has(x) == 1
-end
-
-local executable = function(x)
-  return vim.fn.executable(x) == 1
-end
-
-local is_wsl = (function()
-  local output = vim.fn.systemlist "uname -r"
-  return not not string.find(output[1] or "", "WSL")
-end)()
-
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
@@ -40,9 +27,13 @@ return packer.startup(
     use "EdenEast/nightfox.nvim"                                
     use "lunarvim/darkplus.nvim"
     use { 'nvim-lualine/lualine.nvim',
-          requres = {'kyazdani42/nvim-web-devicons', opt = true}
+      requres = {'kyazdani42/nvim-web-devicons', opt = true}
     }
 
+    use {
+      "numToStr/Comment.nvim",
+      tag = 'v0.6'
+    }
 
     -- Git stuff
     use "lewis6991/gitsigns.nvim"
@@ -51,10 +42,10 @@ return packer.startup(
 --     use "airblade/vim-gitgutter"
 --     use "tpope/vim-fugitive"
     -- use "mhinz/vim-startify"
---     use { 
---           'goolord/alpha-nvim',
---           requires = {'kyazdani42/nvim-web-devicons'}
---     }
+    use { 
+      'goolord/alpha-nvim',
+      requires = {'kyazdani42/nvim-web-devicons'}
+    }
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
     use { 
