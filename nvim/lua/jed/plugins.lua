@@ -36,7 +36,10 @@ return packer.startup(
     }
 
     -- Git stuff
-    use "lewis6991/gitsigns.nvim"
+    use {
+      "lewis6991/gitsigns.nvim",
+      tag = 'release'
+    }
 
 --     use {'Shatur/neovim-session-manager'}
 --     use "airblade/vim-gitgutter"
@@ -56,16 +59,15 @@ return packer.startup(
     use { "nvim-telescope/telescope-file-browser.nvim" }
     use {'nvim-telescope/telescope-hop.nvim'}
     use "nvim-telescope/telescope-fzy-native.nvim"
+    use "ahmedkhalf/project.nvim"    
+
+    -- Treesitter
     -- use {
     --   'nvim-treesitter/nvim-treesitter',
     --   run = ':TSUpdate'
     -- }
---    use {
---      'numToStr/Comment.nvim',
---      config = function()
---        require('Comment').setup()
---      end
---    }
+
+
     -- LSP stuff
     use {'neovim/nvim-lspconfig'}
     use {'hrsh7th/cmp-cmdline'}

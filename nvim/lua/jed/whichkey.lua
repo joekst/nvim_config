@@ -92,8 +92,10 @@ local mappings = {
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+  ["S"] = { "<cmd>Telescope live_grep grep_open_files=true theme=ivy<cr>", "Find Text in open buffers" },
+
   ["E"] = { "<cmd>Telescope file_browser<cr>", "File browser" },
---  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
   g = {
     name = "Git",

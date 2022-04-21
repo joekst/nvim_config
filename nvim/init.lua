@@ -9,4 +9,5 @@ require "jed.whichkey"
 require "jed.gitsigns"
 require "jed.alpha"
 require "jed.comments"
+require "jed.projects"
 
