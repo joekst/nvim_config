@@ -38,6 +38,6 @@ such a Comment, packer has a feature to lock a version of a plugin using tag.
 
 
 ## Influenced by
-https://github.com/LunarVim/Neovim-from-scratch
+https://github.com/LunarVim/Neovim-from-scratch  
 https://github.com/tjdevries/config_manager  
 https://github.com/wbthomason/packer.nvim
