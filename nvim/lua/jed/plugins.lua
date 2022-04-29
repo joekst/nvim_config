@@ -78,6 +78,7 @@ return packer.startup(
     -- use {'simrat39/symbols-outline.nvim'} -- Give a tree view of symbols, using language server.
     -- Snippet tool
     use {'L3MON4D3/LuaSnip'}
+    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
     use {'saadparwaiz1/cmp_luasnip'}
  --   use {
  --     'ThePrimeagen/harpoon',
