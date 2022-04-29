@@ -11,4 +11,5 @@ require "jed.alpha"
 require "jed.comments"
 require "jed.projects"
 require "jed.bufferline"
+require "jed.cmp"
 
