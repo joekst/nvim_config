@@ -26,13 +26,14 @@ return packer.startup(
     use "kyazdani42/nvim-tree.lua"
     use "EdenEast/nightfox.nvim"                                
     use "lunarvim/darkplus.nvim"
+    use "akinsho/bufferline.nvim"
+    use "moll/vim-bbye"
     use { 'nvim-lualine/lualine.nvim',
       requres = {'kyazdani42/nvim-web-devicons', opt = true}
     }
 
     use {
       "numToStr/Comment.nvim",
-      tag = 'v0.6'
     }
 
     -- Git stuff
