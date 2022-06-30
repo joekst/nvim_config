@@ -41,11 +41,9 @@ return packer.startup(
       "lewis6991/gitsigns.nvim",
       tag = 'release'
     }
-
---     use {'Shatur/neovim-session-manager'}
 --     use "airblade/vim-gitgutter"
 --     use "tpope/vim-fugitive"
-    -- use "mhinz/vim-startify"
+
     use { 
       'goolord/alpha-nvim',
       requires = {'kyazdani42/nvim-web-devicons'}
@@ -63,10 +61,10 @@ return packer.startup(
     use "ahmedkhalf/project.nvim"    
 
     -- Treesitter
-    -- use {
-    --   'nvim-treesitter/nvim-treesitter',
-    --   run = ':TSUpdate'
-    -- }
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+    }
 
 
     -- LSP stuff
