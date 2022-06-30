@@ -1,25 +1,5 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
@@ -34,16 +14,9 @@ if not config_status_ok then
 end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
-vim.g.nvim_tree_respect_buf_cwd = 1
-vim.g.nvim_tree_show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
-}
 
 nvim_tree.setup {
+  respect_buf_cwd = true,
   -- update_to_buf_dir = {
   --   enable = false,
   -- },
@@ -54,6 +27,36 @@ nvim_tree.setup {
     "startify",
     "dashboard",
     "alpha",
+  },
+  renderer = {
+    icons = {
+      show = {
+        git = true,
+        folder = true,
+        file = true,
+        folder_arrow = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          untracked = "U",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+      },
+    },
   },
   -- auto_close = true,
   -- open_on_tab = false,

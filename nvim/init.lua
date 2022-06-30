@@ -1,6 +1,7 @@
 require "jed.settings"
 require "jed.mappings"
 require "jed.plugins"
+require "jed.treesitter"
 require "jed.colorscheme"
 require "jed.lualine"
 require "jed.telescope"
