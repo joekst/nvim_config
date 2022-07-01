@@ -13,4 +13,4 @@ require "jed.comments"
 require "jed.projects"
 require "jed.bufferline"
 require "jed.cmp"
-
+require "jed.nvim-lspconfig"
