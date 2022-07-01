@@ -33,7 +33,7 @@ return packer.startup(
     }
 
     use {
-      "numToStr/Comment.nvim",
+     "numToStr/Comment.nvim",
     }
 
     -- Git stuff
